@@ -1,9 +1,16 @@
+/* Base styles */
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Optional: Remove default padding */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin; /* Use viewport units for responsiveness */
   pointer-events: none;
 }
 
@@ -20,19 +27,53 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(1rem + 1vw); /* Responsive font size */
   color: white;
+  padding: 20px; /* Add some padding for smaller screens */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .App-header {
+    font-size: 1.2rem; /* Increase font size for smaller screens */
+  }
+
+  .App-logo {
+    height: 30vmin; /* Larger logo on small screens */
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .App-header {
+    font-size: 1.5rem; /* Adjust font size for medium screens */
+  }
+
+  .App-logo {
+    height: 20vmin; /* Adjust logo size for medium screens */
+  }
 }
 
 .App-link {
   color: #61dafb;
 }
 
+/* Logo spinning animation */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Additional media queries for larger screens */
+@media (min-width: 901px) {
+  .App-header {
+    font-size: 2rem; /* Larger font size for desktop screens */
+  }
+
+  .App-logo {
+    height: 10vmin; /* Keep logo smaller on large screens */
   }
 }

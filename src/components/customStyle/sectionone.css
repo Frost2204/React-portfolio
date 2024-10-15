@@ -1,0 +1,140 @@
+/* customStyle/sectionone.css */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure the body takes full height */
+  background-color: #f0f0f0; /* Default background color */
+}
+
+#word {
+  color: red;
+  font-weight: bolder;
+}
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+  .hero {
+    height: 400px; /* Set the specific height for mobile view */
+    overflow: hidden; /* Prevent content overflow if needed */
+  }
+
+  /* Optional: Adjust other styles for better mobile experience */
+  .hero-text {
+    padding: 20px; /* Adjust padding for mobile */
+  }
+}
+.hero {
+  position: relative; /* Position relative for overlay positioning */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  background: url('./bg.png') no-repeat center center fixed; /* Background image */
+  background-size: cover; /* Cover the entire background */
+  overflow: hidden; /* Ensure children are contained */
+}
+
+.hero::before {
+  content: ''; /* Empty content for pseudo-element */
+  position: absolute; /* Absolute positioning */
+  top: 0; /* Start from the top */
+  left: 0; /* Start from the left */
+  right: 0; /* Stretch to the right */
+  bottom: 0; /* Stretch to the bottom */
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay (adjust alpha value for intensity) */
+  z-index: 1; /* Ensure overlay is on top */
+}
+
+.hero-contain {
+  position: relative; /* Position relative to allow layering */
+  text-align: center; /* Center text */
+  color: white; /* Text color */
+  flex-grow: 1; /* Allow hero content to grow */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: space-between; /* Space between content and developer text */
+  z-index: 2; /* Ensure content is above overlay */
+}
+
+.display-1 {
+  font-size: 70px; /* Font size for main display */
+  line-height: 1; /* Set line-height to 1 for no spacing between lines */
+}
+
+.display-hero {
+  font-size: 70px; /* Font size for hero subtitle */
+  line-height: 1; /* Set line-height to 1 for no spacing between lines */
+}
+
+.developer-text {
+  font-size: 80px; /* Large developer text */
+  margin: 10px 0; /* Margin for spacing */
+  margin-top: auto; /* Push to bottom in flex container */
+  line-height: 1; /* Set line-height to 1 for no spacing between lines */
+}
+
+.hero-subhead {
+  font-size: 1.2rem; /* Font size for subhead */
+  margin: 20px 0; /* Space above and below */
+  line-height: 1; /* Set line-height to 1 for no spacing between lines */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .display-1 {
+    font-size: 2.5rem; /* Smaller font size for small screens */
+  }
+
+  .display-hero {
+    font-size: 2rem; /* Adjust hero subtitle size */
+  }
+
+  .developer-text {
+    font-size: 60px; /* Smaller developer text */
+    margin-top: 20px; /* Ensure space above developer text */
+  }
+
+  .hero-subhead {
+    font-size: 1rem; /* Smaller subhead text */
+  }
+}
+
+.button-flex {
+  display: flex;
+  justify-content: center; /* Center buttons */
+  flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+  margin-top: 20px; /* Space above buttons */
+}
+
+.w-button {
+  text-decoration: none;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 1rem; /* Base button font size */
+}
+
+.button-purp {
+  background-color: #6a0dad; /* Button color */
+  color: white; /* Text color */
+}
+
+.button-hero {
+  background-color: #333; /* Button color */
+  color: white; /* Text color */
+}
+
+.button-purp:hover,
+.button-hero:hover {
+  opacity: 0.8; /* Button hover effect */
+}
+
+.horizontal-divider {
+  width: 20px; /* Space between buttons */
+}
+
+h1, h2 {
+  font-weight: bolder;
+  margin: 0; /* Remove margin */
+  line-height: 1; /* Set line-height to 1 for no spacing between lines */
+}
