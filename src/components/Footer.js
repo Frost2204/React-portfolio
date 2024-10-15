@@ -36,7 +36,7 @@ const Footer = () => {
 
       <Box sx={{ flexGrow: 1, textAlign: 'center', marginBottom: { xs: '20px', sm: '0' } }}>
         <Typography variant="body2" sx={{ marginBottom: '5px' }}>
-          © 2024 My Portfolio. All rights reserved.
+          © 2024 Nikunj Ranjan ⛩️. All rights reserved.
         </Typography>
         <Typography variant="body2" sx={{ marginBottom: '20px' }}>
           Follow me on 💛 social media
