@@ -66,6 +66,7 @@ const Contact = ({ open, onClose }) => {
   Contact Me
   <span style={{ fontWeight: 'normal', fontSize: '0.85rem', display: 'block', marginTop: '5px', color: 'gray' }}>
     For inquiries, custom projects, website development, or 3D modeling services, feel free to reach out.
+Please avoid spamming or submitting the form multiple times. We aim to respond as soon as possible.
   </span>
   <IconButton
     aria-label="close"
