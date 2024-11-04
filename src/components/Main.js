@@ -3,19 +3,22 @@ import SectionOne from './SectionOne';
 import SectionTwo from './SectionTwo';
 import SectionThree from './SectionThree';
 import SectionFour from './SectionFour';
-import About from './about'
-import VisualVibe from './visualvibe'
-
+import SectionFive from './SectionFive';
+import About from './about';
+import VisualVibe from './visualvibe';
+import FixedButton from './FixedButton';
 
 const Main = () => {
   return (
     <div>
       <SectionOne />
       <SectionTwo />
-      <SectionThree />
       <SectionFour />
-      <About/>
-      <VisualVibe/>      
+      <SectionFive />
+      <SectionThree />
+      <About />
+      <VisualVibe />
+      <FixedButton />
     </div>
   );
 };

@@ -1,60 +1,75 @@
 import React from 'react';
 import { Box, Typography, Chip, Button } from '@mui/material';
 
-// Importing local images from src/customStyle
-import projectOneImage from './customStyle/renders/guitar.png';
-import projectTwoImage from './customStyle/renders/car.jpg';
-import projectThreeImage from './customStyle/renders/shoes.png';
-import projectFourImage from './customStyle/renders/chess.png';
-import projectFiveImage from './customStyle/renders/speaker.png';
-import projectSixImage from './customStyle/renders/room.png';
+// Importing local images and GIFs from src/customStyle
+import projectOneImage from './customStyle/Games/FortressDash.png';
+import projectOneGif from './customStyle/Games/gif/fortress.gif';
+import projectTwoImage from './customStyle/Games/Aim Down.png';
+import projectTwoGif from './customStyle/Games/gif/aimdown.gif';
+import projectThreeImage from './customStyle/Games/Project Mars.png';
+import projectThreeGif from './customStyle/Games/gif/rocket.gif';
+import projectFourImage from './customStyle/Games/flappybird.png';
+import projectFourGif from './customStyle/Games/gif/bird.gif';
+import projectFiveImage from './customStyle/Games/baloon.jpg';
+import projectFiveGif from './customStyle/Games/gif/baloon.gif';
+import projectSixImage from './customStyle/game.png';
 
 const projects = [
   {
-    name: 'Guitar Model',
+    name: 'Fortress Dash',
     image: projectOneImage,
-    skills: ['Blender', 'After Effect', 'UV Wrap'],
-    description: 'Wooden Guitar Model',
+    hoverGif: projectOneGif,
+    skills: ['Link List', 'Object Pickup', 'Infinite Level', 'Score Manage', 'High Score'],
+    description: 'Play as the Wizard King who is running away from danger while dodging heavy rocks and other obstacles. The goal is to achieve the highest score possible by avoiding obstacles and collecting power-ups.',
+    link: 'https://github.com/Frost2204/Fortress-Dash',
   },
   {
-    name: 'Car Render',
+    name: 'Aim Down',
     image: projectTwoImage,
-    skills: ['Blender', 'Texture'],
-    description: 'Render Of A Car',
+    hoverGif: projectTwoGif,
+    skills: ['Ammo PickUp', 'FPS', 'Enemy AI'],
+    description: 'Welcome to Dark Survival Game, a single-player survival game set in a dark, mysterious environment where your only friend is a flashlight.',
+    link: 'https://github.com/Frost2204/Aim-Down',
   },
   {
-    name: 'FILA Shoes Model',
+    name: 'Project Mars',
     image: projectThreeImage,
-    skills: ['Blender', 'After Effect', 'UV Wrap'],
-    description: 'A Model Of A Shoes Of Brand FILA.',
+    hoverGif: projectThreeGif,
+    skills: ['Gravity', 'Force Control', '2.5 D'],
+    description: 'Welcome to the Rocket Landing Game! 🎮 In this exciting game, your mission is to pilot a rocket and land it safely on a rocky and dark environment.',
+    link: 'https://github.com/Frost2204/Project-Mars',
   },
   {
-    name: 'Chess Piece Model',
+    name: 'Flappy Bird',
     image: projectFourImage,
-    skills: ['Blender', 'UV Wrap'],
-    description: 'Chess Piece made in blender',
+    hoverGif: projectFourGif,
+    skills: ['Gravity', 'Infinite Level', 'High Score'],
+    description: 'Flappy Bird is an arcade-style game in which the player controls the bird Faby, which moves persistently to the right.',
+    link: 'https://github.com/Frost2204/Flarpy-Bird',
   },
   {
-    name: 'MI Speaker Model',
+    name: 'Balloon Pop Game',
     image: projectFiveImage,
-    skills: ['Blender', 'UV Wrap'],
-    description: 'MI Brand Speaker made in blender',
+    hoverGif: projectFiveGif,
+    skills: ['Infinite Level', 'High Score'],
+    description: 'Balloon Pop Game is a fun and interactive game where players pop balloons to score points.',
+    link: 'https://github.com/Frost2204/BaloonBurst',
   },
   {
-    name: 'Room Model',
+    name: 'Survival 3D Game',
     image: projectSixImage,
-    skills: ['Blender', 'UV Wrap'],
-    description: 'A room mini model made in blender',
+    skills: ['C#', 'Unreal Engine', 'Blender'],
+    description: 'A 3D survival game built using Unreal Engine, featuring an open world.',
   },
 ];
 
 const SectionThree = () => {
   return (
-    <div className="p-6">
+    <div className="p-6" id="unity">
       <Typography variant="h1" className="text-center mb-4">
-        <span className="text-[60px] font-bold">Blender</span>
+        <span className="text-[60px] font-bold">Game Dev</span>
       </Typography>
-      <Typography className="text-center mb-8">These Are Renders And Models I created.</Typography>
+      <Typography className="text-center mb-8">Some of the cool Games I worked on in Unity</Typography>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10">
         {projects.map((project, index) => (
@@ -66,7 +81,11 @@ const SectionThree = () => {
               <img
                 src={project.image}
                 alt={project.name}
-                className="absolute inset-0 w-full h-full object-cover rounded-lg hover:scale-105 transition-all duration-300"
+                className="absolute inset-0 w-full h-full object-cover rounded-lg transition-all duration-300"
+                onMouseEnter={(e) => {
+                  if (project.hoverGif) e.currentTarget.src = project.hoverGif;
+                }}
+                onMouseLeave={(e) => (e.currentTarget.src = project.image)}
               />
             </div>
             <Typography
@@ -75,7 +94,6 @@ const SectionThree = () => {
             >
               {project.name}
             </Typography>
-            {/* Project description under the name */}
             <Typography
               variant="body2"
               className="px-4 mb-2 text-gray-400 text-left py-1"
@@ -90,10 +108,31 @@ const SectionThree = () => {
                   className="rounded-full"
                   color="primary"
                   variant="outlined"
-                  style={{ padding: '4px 8px' }} // Add padding to each chip
+                  style={{ padding: '4px 8px' }}
                 />
               ))}
             </div>
+            {project.link && (
+              <Box className="flex justify-start px-4 mt-4">
+                <Button
+                  variant="outlined"
+                  color="white"
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    borderRadius: '20px',
+                    padding: '8px 16px',
+                    border: '2px solid white',
+                    backgroundColor: 'transparent',
+                    transition: 'border-color 0.3s, box-shadow 0.3s',
+                  }}
+                  className="hover:border-white hover:shadow-lg hover:shadow-slate-300"
+                >
+                  View Project
+                </Button>
+              </Box>
+            )}
           </Box>
         ))}
       </div>
@@ -101,9 +140,9 @@ const SectionThree = () => {
       {/* View More Button */}
       <div className="flex justify-center mt-8">
         <Button
-          variant="contained" // Use contained variant for a filled button
+          variant="contained"
           color="primary"
-          href="https://www.instagram.com/visualvibe.in/"
+          href="https://github.com/Frost2204"
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -111,7 +150,7 @@ const SectionThree = () => {
             padding: '10px 20px',
             transition: 'background-color 0.3s',
           }}
-          className="hover:bg-blue-600" // Change color on hover
+          className="hover:bg-blue-600"
         >
           View More
         </Button>

@@ -5,7 +5,6 @@ import Contact from './Contact'; // Import the new Contact component
 
 // Importing local images from src/customStyle
 import projectOneImage from './customStyle/adsvenchar.png';
-import projectTwoImage from './customStyle/game.png';
 import projectThreeImage from './customStyle/snake.png';
 import projectFourImage from './customStyle/piano.png';
 import projectFiveImage from './customStyle/codeeditor.jpeg';
@@ -19,12 +18,7 @@ const projects = [
     description: 'A web-based adventure game where users can explore different scenarios.',
     link: 'https://frost2204.github.io/AdsVenchar2.0/index.html',
   },
-  {
-    name: 'Survival 3D Game',
-    image: projectTwoImage,
-    skills: ['C#', 'Unreal Engine', 'Blender'],
-    description: 'A 3D survival game built using Unreal Engine, featuring an open world.',
-  },
+
   {
     name: 'Snake Game',
     image: projectThreeImage,

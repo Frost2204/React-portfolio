@@ -67,6 +67,10 @@ const Header = () => {
             onClick={
               label === 'Contact'
                 ? handleContactClick
+                : label === 'Projects'
+                ? () => {
+                    scrollToSection('unity'); // Ensure it scrolls to 'unity' section
+                  }
                 : () => scrollToSection(label.toLowerCase()) // Scroll to respective section
             }
             sx={{ marginBottom: '20px' }} // Increase spacing between buttons
@@ -234,7 +238,17 @@ const Header = () => {
                   },
                 }}
                 onClick={
-                  label === 'Contact' ? handleContactClick : () => scrollToSection(label.toLowerCase()) // Scroll to respective section
+                  label === 'Contact'
+                    ? handleContactClick
+                    : label === 'Projects'
+                    ? () => {
+                        scrollToSection('unity'); // Scroll to the unity section for both mobile and desktop
+                        setDrawerOpen(false); // Close the drawer after clicking
+                      }
+                    : () => {
+                        scrollToSection(label.toLowerCase()); // Scroll to respective section
+                        setDrawerOpen(false); // Close the drawer after clicking
+                      }
                 }
               >
                 {label}

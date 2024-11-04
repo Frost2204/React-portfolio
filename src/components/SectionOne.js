@@ -5,7 +5,7 @@ const SectionOne = () => {
   const spanRef = useRef(null);
 
   useEffect(() => {
-    const words = ["Web", "Graphic", "Java"];
+    const words = ["Game", "Web","Blender"];
     let index = 0;
     let charIndex = 0;
     let isDeleting = false;
