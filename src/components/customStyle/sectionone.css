@@ -5,6 +5,17 @@ body {
   height: 100%; /* Ensure the body takes full height */
   background-color: #f0f0f0; /* Default background color */
 }
+/* customStyle/sectionone.css */
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Make sure the video covers the background */
+  z-index: -1; /* Place the video behind other elements */
+}
 
 #word {
   color: red;
@@ -28,7 +39,6 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh; /* Full viewport height */
-  background: url('./bg.png') no-repeat center center fixed; /* Background image */
   background-size: cover; /* Cover the entire background */
   overflow: hidden; /* Ensure children are contained */
 }

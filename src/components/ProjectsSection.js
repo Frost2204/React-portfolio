@@ -63,7 +63,7 @@ const SectionThree = () => {
       <Typography variant="h1" className="text-center mb-4">
         <span className="text-[60px] font-bold">Projects</span>
       </Typography>
-      <Typography className="text-center mb-8">These are the projects I've worked on.</Typography>
+      <Typography className="text-center mb-8">These are Some of the projects I've worked on.</Typography>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10">
         {projects.map((project, index) => (

@@ -65,7 +65,7 @@ const Contact = ({ open, onClose }) => {
 <DialogTitle className='bg-[#1A1B1D] text-white font-bold '>
   Contact Me
   <span style={{ fontWeight: 'normal', fontSize: '0.85rem', display: 'block', marginTop: '5px', color: 'gray' }}>
-    For inquiries, custom projects, website development,Game Development or 3D modeling services, feel free to reach out. Please avoid spamming or submitting multiple times. We aim to respond as soon as possible.
+    For inquiries, custom projects, website development, or 3D modeling services, feel free to reach out.
   </span>
   <IconButton
     aria-label="close"

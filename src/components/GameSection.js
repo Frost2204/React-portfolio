@@ -27,7 +27,7 @@ const projects = [
     name: 'Aim Down',
     image: projectTwoImage,
     hoverGif: projectTwoGif,
-    skills: ['Ammo PickUp', 'FPS', 'Enemy AI'],
+    skills: ['Ammo PickUp', 'FPS', 'Enemy AI','Shooting'],
     description: 'Welcome to Dark Survival Game, a single-player survival game set in a dark, mysterious environment where your only friend is a flashlight.',
     link: 'https://github.com/Frost2204/Aim-Down',
   },
@@ -35,7 +35,7 @@ const projects = [
     name: 'Project Mars',
     image: projectThreeImage,
     hoverGif: projectThreeGif,
-    skills: ['Gravity', 'Force Control', '2.5 D'],
+    skills: ['Gravity', 'Force Control', '2.5 D','Multiples Levels'],
     description: 'Welcome to the Rocket Landing Game! 🎮 In this exciting game, your mission is to pilot a rocket and land it safely on a rocky and dark environment.',
     link: 'https://github.com/Frost2204/Project-Mars',
   },
@@ -56,10 +56,10 @@ const projects = [
     link: 'https://github.com/Frost2204/BaloonBurst',
   },
   {
-    name: 'Survival 3D Game',
+    name: 'Third Person Shooter',
     image: projectSixImage,
-    skills: ['C#', 'Unreal Engine', 'Blender'],
-    description: 'A 3D survival game built using Unreal Engine, featuring an open world.',
+    skills: ['C#', 'Unreal Engine', 'TPS','Shooting'],
+    description: 'A 3D survival game built using Unreal Engine, player need to kill all the enemy in order to win the game.',
   },
 ];
 
@@ -67,9 +67,9 @@ const SectionThree = () => {
   return (
     <div className="p-6" id="unity">
       <Typography variant="h1" className="text-center mb-4">
-        <span className="text-[60px] font-bold">Game Dev</span>
+        <span className="text-[60px] font-bold">My Game</span>
       </Typography>
-      <Typography className="text-center mb-8">Some of the cool Games I worked on in Unity</Typography>
+      <Typography className="text-center mb-8">Some of the cool Games I worked on in Unity & Unreal Engine</Typography>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10">
         {projects.map((project, index) => (

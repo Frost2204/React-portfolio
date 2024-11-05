@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import './customStyle/sectionone.css';
+import videoSource from './customStyle/bg.mp4'; // Add your video source path
 
 const SectionOne = () => {
   const spanRef = useRef(null);
 
   useEffect(() => {
-    const words = ["Game", "Web","Blender"];
+    const words = ["Game", "Web", "Blender"];
     let index = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -42,6 +43,12 @@ const SectionOne = () => {
 
   return (
     <div id="Top" className="hero mt-12">
+      {/* Video Background */}
+      <video autoPlay muted loop className="video-bg">
+        <source src={videoSource} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
       <div className="hero-contain">
         <div className="hero-text">
           <h1 className="display-1 pt-32 font-bold for-rotator">Hi!🐱‍👓</h1>
@@ -51,7 +58,7 @@ const SectionOne = () => {
           <div className="margin-container-hero">
             <span className="developer-text">Developer</span>
           </div>
-          <div className="margin-50px ">
+          <div className="margin-50px">
             <div className="button-flex mt-20">
               <a
                 href="https://drive.google.com/file/d/1XsL4-wDGeLsdXRjrikbeSUX7Hqw8ea7g/view?usp=sharing"
@@ -63,7 +70,7 @@ const SectionOne = () => {
                 Download Resume
               </a>
               <div className="horizontal-divider"></div>
-              <a href="#projects" className="button-hero black w-button" aria-label="View Projects">
+              <a href="#unity" className="button-hero black w-button" aria-label="View Projects">
                 View Projects
               </a>
             </div>

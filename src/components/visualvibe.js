@@ -79,7 +79,7 @@ const AboutMe = () => {
                   <StyledImage src={teamMember1} alt="Team Member 1" />
                 </ImageContainer>
                 <Typography variant="body2" sx={{ color: '#ffffff', marginTop: 1 }}>Nikunj Ranjan</Typography>
-                <Typography variant="body2" sx={{ color: '#cccccc' }}>3D Modeler & Web Developer</Typography>
+                <Typography variant="body2" sx={{ color: '#cccccc' }}>Game & Web Developer</Typography>
               </Grid>
               {/* Team Member 2 */}
               <Grid item xs={6} sm={6} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>

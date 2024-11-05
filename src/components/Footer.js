@@ -36,13 +36,13 @@ const Footer = () => {
 
       <Box sx={{ flexGrow: 1, textAlign: 'center', marginBottom: { xs: '20px', sm: '0' } }}>
         <Typography variant="body2" sx={{ marginBottom: '5px' }}>
-          © 2024 My Portfolio. All rights reserved.
+          © 2024 Nikunj Ranjan ⛩️. All Rights Reserved.
         </Typography>
         <Typography variant="body2" sx={{ marginBottom: '20px' }}>
-          Follow me on 💛 social media
+          Follow Me On 💛 Social Media
         </Typography>
         <Typography variant="body2" sx={{ marginBottom: '5px' }}>
-          Always open to networking and collaboration.😊 Feel free to reach out!❤️
+          Always Open To Networking And Collaboration.😊 Feel Free To Reach Out!❤️
         </Typography>
         <Typography variant="body2">
           <a href="mailto:nikunjranjan2204@gmail.com" style={{ color: '#fff', textDecoration: 'none' }}>
