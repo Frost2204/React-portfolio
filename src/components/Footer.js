@@ -23,7 +23,7 @@ const Footer = () => {
         textAlign: { xs: 'center', sm: 'left' },
       }}
     >
-      <hr className='bg-white' />
+      <hr className="bg-white" />
       <Box sx={{ flex: '0 0 auto', marginBottom: { xs: '20px', sm: '0' } }}>
         <img
           src={signatureImage}
@@ -45,8 +45,26 @@ const Footer = () => {
           Always Open To Networking And Collaboration.😊 Feel Free To Reach Out!❤️
         </Typography>
         <Typography variant="body2">
-          <a href="mailto:nikunjranjan2204@gmail.com" style={{ color: '#fff', textDecoration: 'none' }}>
+          <a
+            href="mailto:nikunjranjan2204@gmail.com"
+            className="relative text-white group"
+          >
             nikunjranjan2204@gmail.com
+            {/* Underline animation */}
+            <span className="absolute bottom-0 left-0 h-[2px] bg-white w-0 group-hover:w-full transition-all duration-300 ease-in-out"></span>
+
+            {/* Glow effect (only on hover) */}
+            <style>
+              {`
+                .group {
+                  transition: text-shadow 0.3s ease-in-out;
+                }
+
+                .group:hover {
+                  text-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.8);
+                }
+              `}
+            </style>
           </a>
         </Typography>
       </Box>
@@ -92,7 +110,7 @@ const Footer = () => {
             },
           }}
         >
-          <img src={DiscordIcon} alt="Discord" style={{ width: '24px', height: '24px' }} /> {/* Use the custom SVG */}
+          <img src={DiscordIcon} alt="Discord" style={{ width: '24px', height: '24px' }} />
         </IconButton>
         <IconButton
           component="a"

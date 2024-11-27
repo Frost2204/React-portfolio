@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Box, Typography, Chip, Button } from '@mui/material';
 
 // Importing local images and GIFs from src/customStyle
@@ -64,18 +64,76 @@ const projects = [
 ];
 
 const SectionThree = () => {
+  const [visible, setVisible] = useState({
+    title: false,
+    subtitle: false,
+  });
+
+  const observerRef = useRef();
+
+  // Set up IntersectionObserver
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const targetId = entry.target.getAttribute('data-id');
+          if (entry.isIntersecting) {
+            setVisible((prev) => ({
+              ...prev,
+              [targetId]: true,
+            }));
+          } else {
+            setVisible((prev) => ({
+              ...prev,
+              [targetId]: false,
+            }));
+          }
+        });
+      },
+      {
+        threshold: 0.1, // Trigger when 10% of the element is visible
+      }
+    );
+
+    const elements = document.querySelectorAll('.fade-item');
+    elements.forEach((element) => observer.observe(element));
+    observerRef.current = observer;
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="p-6" id="unity">
-      <Typography variant="h1" className="text-center mb-4">
+    <div className="p-6" id="unity" style={{ overflowX: 'hidden' }}>
+      {/* Title with Animation */}
+      <Typography
+        variant="h1"
+        className={`fade-item text-center mb-4 transition-all duration-700 ${visible.title ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'}`}
+        data-id="title"
+      >
         <span className="text-[60px] font-bold">My Game</span>
       </Typography>
-      <Typography className="text-center mb-8">Some of the cool Games I worked on in Unity & Unreal Engine</Typography>
 
+      {/* Subtitle with Animation */}
+      <Typography
+        className={`fade-item text-center mb-8 transition-all duration-700 ${visible.subtitle ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-5'}`}
+        data-id="subtitle"
+      >
+        Some of the cool Games I worked on in Unity & Unreal Engine
+      </Typography>
+
+      {/* Project Grid with fade-in effect */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10">
         {projects.map((project, index) => (
           <Box
             key={index}
-            className="p-6 bg-[#232529] rounded-lg shadow-lg transition-all duration-300 hover:bg-[#1A1B1D] hover:shadow-xl relative"
+            className={`fade-item p-6 bg-[#232529] rounded-lg shadow-lg transition-opacity duration-700 ${visible[index] ? 'opacity-100' : 'opacity-0'}`}
+            data-id={index} // Ensuring each box is observed separately
+            sx={{
+              backdropFilter: 'blur(10px)', // Glass effect
+              backgroundColor: 'rgba(255, 255, 255, 0.1)', // Semi-transparent background
+              borderRadius: '20px', // Rounded corners for each project box
+              boxShadow: '0 0 15px rgba(255, 255, 255, 0.3)', // Light shadow around the box
+            }}
           >
             <div className="relative w-full pb-[100%] rounded-lg overflow-hidden group mb-4">
               <img
@@ -88,28 +146,15 @@ const SectionThree = () => {
                 onMouseLeave={(e) => (e.currentTarget.src = project.image)}
               />
             </div>
-            <Typography
-              variant="h6"
-              className="text-left mt-2 mb-2 px-4 py-1 transition-all duration-300 font-bold"
-            >
+            <Typography variant="h6" className="text-left mt-2 mb-2 px-4 py-1 font-bold">
               {project.name}
             </Typography>
-            <Typography
-              variant="body2"
-              className="px-4 mb-2 text-gray-400 text-left py-1"
-            >
+            <Typography variant="body2" className="px-4 mb-2 text-gray-400 text-left py-1">
               {project.description}
             </Typography>
             <div className="flex justify-start flex-wrap gap-2 px-4 mt-5 mb-0">
               {project.skills.map((skill, i) => (
-                <Chip
-                  key={i}
-                  label={skill}
-                  className="rounded-full"
-                  color="primary"
-                  variant="outlined"
-                  style={{ padding: '4px 8px' }}
-                />
+                <Chip key={i} label={skill} className="rounded-full" color="primary" variant="outlined" style={{ padding: '4px 8px' }} />
               ))}
             </div>
             {project.link && (
@@ -125,7 +170,6 @@ const SectionThree = () => {
                     padding: '8px 16px',
                     border: '2px solid white',
                     backgroundColor: 'transparent',
-                    transition: 'border-color 0.3s, box-shadow 0.3s',
                   }}
                   className="hover:border-white hover:shadow-lg hover:shadow-slate-300"
                 >
@@ -148,7 +192,6 @@ const SectionThree = () => {
           style={{
             borderRadius: '20px',
             padding: '10px 20px',
-            transition: 'background-color 0.3s',
           }}
           className="hover:bg-blue-600"
         >

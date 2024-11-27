@@ -20,27 +20,33 @@ const StyledButton = styled(Button)(({ theme }) => ({
 
 const SectionTwo = () => {
   return (
-    <Box id="skills"
-      sx={{ 
-        display: 'flex', 
-        justifyContent: 'center', 
-        padding: 4, 
-        maxWidth: { xs: '100%', sm: '95%' }, // 100% on mobile, 95% on larger screens
-        margin: '0 auto', // Center the box
+    <Box 
+      id="skills"
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        padding: 4,
+        maxWidth: { xs: '100%', sm: '95%' },
+        margin: '30px auto',
+        backdropFilter: 'blur(10px)', // Glassmorphism effect (blur)
+        backgroundColor: 'rgba(255, 255, 255, 0.1)', // Semi-transparent background
+        borderRadius: '20px', // Rounded corners for the entire section
+        boxShadow: '0 0 10px #ffff', // Shadow in all directions
+        overflow: 'hidden', // Prevent overflow outside the rounded corners
       }}
     >
-      <Grid container spacing={4} alignItems="center"> {/* Align items vertically center */}
+      <Grid container spacing={4} alignItems="center">
         {/* Left Side Image */}
         <Grid item xs={12} sm={6} textAlign="center">
-          <Box 
+          <Box
             sx={{
-              borderRadius: '20px', // Set border radius here
+              borderRadius: '20px', // Border radius for the image container
               overflow: 'hidden', // Ensure the image respects the border radius
-              display: 'flex', // Use flexbox for centering
+              display: 'flex',
               justifyContent: 'center', // Center the image horizontally
               alignItems: 'center', // Center the image vertically
-              maxHeight: '300px', // Limit the maximum height of the image container
-              padding: 2, // Add padding for spacing
+              maxHeight: '300px',
+              padding: 2,
             }}
           >
             <img
@@ -49,8 +55,8 @@ const SectionTwo = () => {
               style={{
                 width: '100%',
                 height: 'auto',
-                borderRadius: '20px', // Ensure image has rounded corners
-                objectFit: 'cover', // Ensures the whole image is visible without distortion
+                borderRadius: '20px',
+                objectFit: 'cover',
               }}
             />
           </Box>
@@ -58,19 +64,19 @@ const SectionTwo = () => {
 
         {/* Right Side Skills */}
         <Grid item xs={12} sm={6}>
-          <Typography variant="h4" sx={{ fontWeight: 'bold', fontSize: '50px', color: '#fffff' }}>
+          <Typography variant="h4" sx={{ fontWeight: 'bold', fontSize: '50px', color: '#fff' }}>
             Hi, I'm Nikunj Ranjan
           </Typography>
           <Typography variant="h6" sx={{ marginTop: 2, fontWeight: 'normal', fontSize: '1.25rem', color: '#cccccc' }}>
-          I am a Game & Web Developer with a passion for crafting interactive experiences. My journey involves creating innovative websites and immersive gaming worlds that captivate users. In addition to my development skills, I also dabble in 3D modeling for games, allowing me to bring my visions to life in exciting ways. I am constantly learning and growing, always eager to embrace new challenges and technologies in the ever-evolving digital landscape.
+            I am a Game & Web Developer with a passion for crafting interactive experiences. My journey involves creating innovative websites and immersive gaming worlds that captivate users. In addition to my development skills, I also dabble in 3D modeling for games, allowing me to bring my visions to life in exciting ways. I am constantly learning and growing, always eager to embrace new challenges and technologies in the ever-evolving digital landscape.
           </Typography>
-          
+
           {/* Skill Buttons */}
           <Box
             sx={{
               display: 'flex',
               flexWrap: 'wrap', // Allows buttons to wrap to the next line
-              gap: 2, // Space between buttons
+              gap: 2,
               marginTop: 3,
             }}
           >
@@ -93,7 +99,7 @@ const SectionTwo = () => {
               Java Script
             </StyledButton>
             <StyledButton variant="contained" startIcon={<span role="img" aria-label="blender">🖥️</span>}>
-            Object-Oriented Programming
+              Object-Oriented Programming
             </StyledButton>
             <StyledButton variant="contained" startIcon={<span role="img" aria-label="react">⚛️</span>}>
               React js
