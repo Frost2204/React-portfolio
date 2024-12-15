@@ -12,9 +12,19 @@ import projectFourImage from './customStyle/Games/flappybird.png';
 import projectFourGif from './customStyle/Games/gif/bird.gif';
 import projectFiveImage from './customStyle/Games/baloon.jpg';
 import projectFiveGif from './customStyle/Games/gif/baloon.gif';
-import projectSixImage from './customStyle/game.png';
+import projectSixImage from './customStyle/Games/MechInvasion.webp';
+import projectSixGif from './customStyle/Games/gif/MechInvasion.gif';
+
 
 const projects = [
+  {
+    name: 'Mech Invasion',
+    image: projectSixImage,
+    hoverGif: projectSixGif,
+    skills: ['Link List','Infinite Level', 'Score Manage', 'High Score'],
+    description: 'Defend, Strategize, and Conquer Step into the thrilling sequel to the hit tower defence action-strategy game! With new weapons, dynamic landscapes, and endless tactical possibilities, this game takes the genre to the next level.',
+    link: 'https://play.google.com/store/apps/details?id=com.DelightPlusGames.TowerDefence&pcampaignid=web_share',
+  },
   {
     name: 'Fortress Dash',
     image: projectOneImage,
@@ -54,13 +64,7 @@ const projects = [
     skills: ['Infinite Level', 'High Score'],
     description: 'Balloon Pop Game is a fun and interactive game where players pop balloons to score points.',
     link: 'https://github.com/Frost2204/BaloonBurst',
-  },
-  {
-    name: 'Third Person Shooter',
-    image: projectSixImage,
-    skills: ['C#', 'Unreal Engine', 'TPS','Shooting'],
-    description: 'A 3D survival game built using Unreal Engine, player need to kill all the enemy in order to win the game.',
-  },
+  }
 ];
 
 const SectionThree = () => {
