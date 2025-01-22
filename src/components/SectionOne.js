@@ -61,7 +61,7 @@ const SectionOne = () => {
           <div className="margin-50px">
             <div className="button-flex mt-20">
               <a
-                href="https://drive.google.com/file/d/1XsL4-wDGeLsdXRjrikbeSUX7Hqw8ea7g/view?usp=sharing"
+                href="https://drive.google.com/file/d/1rHL0-t8ILDtuUL2yYYttk6GA5_BO-vB5/view?usp=sharing"
                 target="_blank"
                 className="button-purp w-button"
                 rel="noreferrer"
