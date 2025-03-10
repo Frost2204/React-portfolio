@@ -108,7 +108,7 @@ const AboutMe = () => {
             </Typography>
             <GlowingLine />
             <Typography variant="h6" sx={{ fontWeight: 'normal', color: '#ffffff' }}>
-              Asansol Engineering College {/* Replace with your actual college name */}
+              Game Developer {/* Replace with your actual college name */}
             </Typography>
             <Typography variant="h6" sx={{ fontWeight: 'normal', color: '#cccccc', marginTop: 1 }}>
               B.Tech in Information Technology
@@ -116,12 +116,11 @@ const AboutMe = () => {
             <Typography variant="body1" sx={{ marginTop: 2, color: '#cccccc' }}>
               2020 - 2024
             </Typography>
-            <Typography variant="h6" sx={{ marginTop: 2, fontWeight: 'normal', color: '#cccccc' }}>
-              Web Developer & Blender Artist
+            <Typography variant="h6" sx={{ marginTop: 2, fontWeight: 'Bold', color: '#cccccc' }}>
+              Game Developer | Web Developer | Unity | Unreal Engine | Blender
             </Typography>
             <Typography variant="body1" sx={{ marginTop: 2, color: '#cccccc' }}>
-              Proficient in front-end web development (HTML, Java, JavaScript, CSS) with expertise in Unreal Engine
-              for creating immersive games and Blender for crafting 3D animations and graphics.
+            I'm Nikunj, a passionate game developer and web developer with experience in Unity, Unreal Engine, and front-end technologies. I love creating immersive gameplay experiences and experimenting with AI in games. Currently, I'm working on projects like a 2D platformer and a sci-fi runner while continuously learning and refining my skills. 🚀🎮
             </Typography>
           </motion.div>
         </Grid>

@@ -76,6 +76,7 @@ const SectionOne = () => {
                 aria-label="View Projects"
               >
                 View Projects
+                
               </a>
             </div>
           </div>

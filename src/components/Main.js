@@ -4,6 +4,7 @@ import SectionTwo from './SectionTwo';
 import SectionThree from './GameSection';
 import SectionFour from './BlenderSection';
 import SectionFive from './ProjectsSection';
+import FavoriteGames from './EpicPlaygrounds'; // New Section
 import About from './about';
 import VisualVibe from './visualvibe';
 import FixedButton from './FixedButton';
@@ -17,8 +18,9 @@ const Main = () => {
       <SectionFour />
       <SectionFive />
       <About />
+      <FavoriteGames />
       <VisualVibe />
-      <FixedButton />
+      {/* <FixedButton /> */}
     </div>
   );
 };
