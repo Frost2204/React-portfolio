@@ -12,7 +12,7 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from './customStyle/nikunj.png'; // Adjust the path based on where your image is located
-import skillsIcon from './customStyle/VV.png'; // New image for the Skills link
+import skillsIcon from './customStyle/GIT.png'; // New image for the Skills link
 import Contact from './Contact'; // Import the new Contact component
 
 const Header = () => {
@@ -122,7 +122,7 @@ const Header = () => {
             }}
           >
             <a
-              href="#visualvibe"
+              href="https://github.com/Frost2204" target="_blank"
               style={{ textDecoration: 'none' }}
             >
               <img
@@ -170,7 +170,7 @@ const Header = () => {
               >
                 {/* Skills icon with hover effect and new tab link */}
                 <a
-                  href="#visualvibe"
+                  href="https://github.com/Frost2204" target="_blank"
                   style={{ textDecoration: 'none' }}
                 >
                   <img
@@ -178,7 +178,7 @@ const Header = () => {
                     alt="Skills Icon"
                     style={{
                       height: '30px',
-                      marginRight: '8px',
+                      marginRight: '40px',
                       borderRadius: '50%',
                       transition: 'filter 0.3s ease',
                     }}

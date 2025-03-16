@@ -98,7 +98,9 @@ const SectionTwo = () => {
             <StyledButton variant="contained" startIcon={<span role="img" aria-label="blender">🖥️</span>}>
               Object-Oriented Programming
             </StyledButton>
-
+            <StyledButton variant="contained" startIcon={<span role="img" aria-label="blender">🟩</span>}>
+              GIT
+            </StyledButton>
             <StyledButton variant="contained" startIcon={<span role="img" aria-label="html">🌐</span>}>
               HTML
             </StyledButton>
