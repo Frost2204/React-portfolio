@@ -242,7 +242,7 @@ const Header = () => {
                     ? handleContactClick
                     : label === 'Projects'
                     ? () => {
-                        scrollToSection('unity'); // Scroll to the unity section for both mobile and desktop
+                        scrollToSection('Games'); // Scroll to the unity section for both mobile and desktop
                         setDrawerOpen(false); // Close the drawer after clicking
                       }
                     : () => {

@@ -157,6 +157,18 @@ const AboutMe = () => {
               transition: "all 1s ease-out",
             }}
           >
+            Freelance Work
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              marginTop: 1,
+              color: "#cccccc",
+              opacity: isVisualVibeVisible ? 1 : 0, // Fade in effect for text
+              transform: isVisualVibeVisible ? "none" : "translateX(-50px)",
+              transition: "all 1s ease-out",
+            }}
+          >
             We are a small team dedicated to creating 3D models, animations, and
             web pages. 🚀✨
           </Typography>

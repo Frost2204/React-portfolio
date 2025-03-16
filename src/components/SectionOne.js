@@ -1,9 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./customStyle/sectionone.css";
 import videoSource from "./customStyle/bg.mp4"; // Add your video source path
 
 const SectionOne = () => {
   const spanRef = useRef(null);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     const words = ["Game", "Web", "Blender"];
@@ -60,24 +61,56 @@ const SectionOne = () => {
           </div>
           <div className="margin-50px">
             <div className="button-flex mt-20">
+              {/* Resume Button */}
               <a
-                href="https://drive.google.com/file/d/1EHWHKCeFyf40CECN8QiLlv6iVi6zn9hh/view?usp=sharing"
+                href="https://drive.google.com/file/d/1vDO9HaYqETkGjfkY5eZKvQUchndgzL6A/view?usp=sharing"
                 target="_blank"
                 className="button-purp w-button"
                 rel="noreferrer"
                 aria-label="Download Resume"
               >
-                Download Resume
+                View Resume
               </a>
               <div className="horizontal-divider"></div>
-              <a
-                href="#unity"
-                className="button-hero black w-button"
-                aria-label="View Projects"
+
+              {/* Dropdown Container with hover fix */}
+              <div
+                className="relative group"
               >
-                View Projects
-                
-              </a>
+                {/* View Projects Button */}
+                <a
+                  href="#"
+                  className="button-hero black w-button top-2 px-6 py-3 relative z-20"
+                  aria-label="View Projects"
+                >
+                  View Projects
+                </a>
+
+                {/* Dropdown Menu (Visible when hovering over parent) */}
+                <div
+                  className="absolute bottom-0 left-full ml-2 w-52 bg-gray-900 text-white shadow-lg rounded-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300"
+                >
+                  <a
+                    href="#Games"
+                    className="block px-5 py-3 border-b border-gray-700 hover:bg-gray-700 transition"
+                  >
+                    🎮 Game Projects
+                  </a>
+                  <a
+                    href="#blender"
+                    className="block px-5 py-3 border-b border-gray-700 hover:bg-gray-700 transition"
+                  >
+                    🎨 Blender Projects
+                  </a>
+                  <a
+                    href="#projects"
+                    className="block px-5 py-3 hover:bg-gray-700 transition"
+                  >
+                    💻 Other Projects
+                  </a>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>

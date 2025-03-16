@@ -45,7 +45,7 @@ const projects = [
   },
 ];
 
-const SectionThree = () => {
+const SectionFive = () => {
   const [visible, setVisible] = useState({});
   const observerRef = useRef();
 
@@ -110,7 +110,7 @@ const SectionThree = () => {
       </Typography>
 
       {/* Project Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10">
+      <div  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10">
         {projects.map((project, index) => (
           <Box
             key={index}
@@ -206,4 +206,4 @@ const SectionThree = () => {
   );
 };
 
-export default SectionThree;
+export default SectionFive;

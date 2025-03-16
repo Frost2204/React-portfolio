@@ -35,10 +35,10 @@ const projects = [
     description: 'Chess Piece made in blender',
   },
   {
-    name: 'MI Speaker Model',
+    name: 'boAt Speaker Model',
     image: projectFiveImage,
     skills: ['Blender', 'UV Wrap'],
-    description: 'MI Brand Speaker made in blender',
+    description: 'Boat Brand Speaker made in blender',
   },
   {
     name: 'Room Model',
@@ -88,7 +88,7 @@ const SectionFour = () => {
   }, []);
 
   return (
-    <div className="p-6">
+    <div className="p-6" id="blender">
       {/* Title */}
       <Typography
         variant="h1"

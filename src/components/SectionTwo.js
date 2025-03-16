@@ -65,10 +65,10 @@ const SectionTwo = () => {
         {/* Right Side Skills */}
         <Grid item xs={12} sm={6}>
           <Typography variant="h4" sx={{ fontWeight: 'bold', fontSize: '50px', color: '#fff' }}>
-            Hi, I'm Nikunj Ranjan
+            My Skills
           </Typography>
           <Typography variant="h6" sx={{ marginTop: 2, fontWeight: 'normal', fontSize: '1.25rem', color: '#cccccc' }}>
-            I am a Game & Web Developer with a passion for crafting interactive experiences. My journey involves creating innovative websites and immersive gaming worlds that captivate users. In addition to my development skills, I also dabble in 3D modeling for games, allowing me to bring my visions to life in exciting ways. I am constantly learning and growing, always eager to embrace new challenges and technologies in the ever-evolving digital landscape.
+          Some of my skills I work on or I can work with and am familiar with
           </Typography>
 
           {/* Skill Buttons */}
@@ -80,26 +80,33 @@ const SectionTwo = () => {
               marginTop: 3,
             }}
           >
-            <StyledButton variant="contained" startIcon={<span role="img" aria-label="java">☕</span>}>
-              Blender
-            </StyledButton>
             <StyledButton variant="contained" startIcon={<span role="img" aria-label="python">🐍</span>}>
               Unity
+            </StyledButton>
+            <StyledButton variant="contained" startIcon={<span role="img" aria-label="java">☕</span>}>
+              Blender
             </StyledButton>
             <StyledButton variant="contained" startIcon={<span role="img" aria-label="unreal">🎮</span>}>
               Unreal Engine
             </StyledButton>
+            <StyledButton variant="contained" startIcon={<span role="img" aria-label="blender">🧑‍💻</span>}>
+              C#
+            </StyledButton>
+            <StyledButton variant="contained" startIcon={<span role="img" aria-label="blender">#️⃣</span>}>
+              Unity Version Control
+            </StyledButton>
+            <StyledButton variant="contained" startIcon={<span role="img" aria-label="blender">🖥️</span>}>
+              Object-Oriented Programming
+            </StyledButton>
+
             <StyledButton variant="contained" startIcon={<span role="img" aria-label="html">🌐</span>}>
               HTML
             </StyledButton>
             <StyledButton variant="contained" startIcon={<span role="img" aria-label="css">🎨</span>}>
               CSS
             </StyledButton>
-            <StyledButton variant="contained" startIcon={<span role="img" aria-label="javascript">💻</span>}>
+            <StyledButton variant="contained" startIcon={<span role="img" aria-label="javascript">📜</span>}>
               Java Script
-            </StyledButton>
-            <StyledButton variant="contained" startIcon={<span role="img" aria-label="blender">🖥️</span>}>
-              Object-Oriented Programming
             </StyledButton>
             <StyledButton variant="contained" startIcon={<span role="img" aria-label="react">⚛️</span>}>
               React js
