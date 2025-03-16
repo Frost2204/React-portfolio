@@ -170,7 +170,7 @@ const SectionFour = () => {
         <Button
           variant="contained" // Use contained variant for a filled button
           color="primary"
-          href="https://www.instagram.com/visualvibe.in/"
+          href="https://www.instagram.com/visualivibe/"
           target="_blank"
           rel="noopener noreferrer"
           style={{
