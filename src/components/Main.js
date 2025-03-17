@@ -9,18 +9,20 @@ import About from './about';
 import VisualVibe from './visualvibe';
 import FixedButton from './FixedButton';
 
+import GameMechanics from './GameMechanics';
+
 const Main = () => {
   return (
     <div>
       <SectionOne />
       <SectionTwo />
       <SectionThree />
+      <GameMechanics />
       <SectionFour />
       <SectionFive />
       <About />
       <FavoriteGames />
       <VisualVibe />
-      {/* <FixedButton /> */}
     </div>
   );
 };

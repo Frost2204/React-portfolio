@@ -97,6 +97,12 @@ const SectionOne = () => {
                     🎮 Game Projects
                   </a>
                   <a
+                    href="#gamemechanics"
+                    className="block px-5 py-3 border-b border-gray-700 hover:bg-gray-700 transition"
+                  >
+                    🔨 Game Mechanics
+                  </a>
+                  <a
                     href="#blender"
                     className="block px-5 py-3 border-b border-gray-700 hover:bg-gray-700 transition"
                   >
@@ -119,6 +125,12 @@ const SectionOne = () => {
                     className="block px-5 py-3 border-b border-gray-700 hover:bg-gray-700 transition"
                   >
                     🎮 Game Projects
+                  </a>
+                  <a
+                    href="#gamemechanics"
+                    className="block px-5 py-3 border-b border-gray-700 hover:bg-gray-700 transition"
+                  >
+                    🔨 Game Mechanics
                   </a>
                   <a
                     href="#blender"
