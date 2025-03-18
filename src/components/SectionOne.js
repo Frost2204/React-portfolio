@@ -63,7 +63,7 @@ const SectionOne = () => {
             <div className="button-flex mt-20">
               {/* Resume Button */}
               <a
-                href="https://drive.google.com/file/d/1vDO9HaYqETkGjfkY5eZKvQUchndgzL6A/view?usp=sharing"
+                href="https://drive.google.com/file/d/1-SkwywscXWu1SgVUGQTdPeODZp0jpi63/view?usp=sharing"
                 target="_blank"
                 className="button-purp w-button"
                 rel="noreferrer"
@@ -74,9 +74,7 @@ const SectionOne = () => {
               <div className="horizontal-divider"></div>
 
               {/* Dropdown Container */}
-              <div
-                className="relative group"
-              >
+              <div className="relative group">
                 {/* View Projects Button */}
                 <a
                   href="#"
@@ -87,9 +85,7 @@ const SectionOne = () => {
                 </a>
 
                 {/* 🔽 Dropdown for Mobile (Appears Below) */}
-                <div
-                  className="absolute top-full mt-2 w-52 bg-gray-900 text-white shadow-lg rounded-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 md:hidden"
-                >
+                <div className="absolute top-full mt-2 w-52 bg-gray-900 text-white shadow-lg rounded-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 md:hidden">
                   <a
                     href="#Games"
                     className="block px-5 py-3 border-b border-gray-700 hover:bg-gray-700 transition"
@@ -117,9 +113,7 @@ const SectionOne = () => {
                 </div>
 
                 {/* ➡️ Dropdown for Desktop (Appears Right) */}
-                <div
-                  className="absolute bottom-0 left-full ml-2 w-52 bg-gray-900 text-white shadow-lg rounded-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 hidden md:block"
-                >
+                <div className="absolute bottom-0 left-full ml-2 w-52 bg-gray-900 text-white shadow-lg rounded-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 hidden md:block">
                   <a
                     href="#Games"
                     className="block px-5 py-3 border-b border-gray-700 hover:bg-gray-700 transition"
@@ -146,7 +140,6 @@ const SectionOne = () => {
                   </a>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
