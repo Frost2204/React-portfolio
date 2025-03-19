@@ -1,31 +1,49 @@
-import React, { useState } from 'react';
-import { Box, Typography, Chip, Button } from '@mui/material';
+import React, { useState } from "react";
+import { Box, Typography, Chip, Button } from "@mui/material";
 
 // Importing images & GIFs
-import shootingImage from './customStyle/mechanics/shooting mechanics.png';
-import shootingGif from './customStyle/mechanics/gif/shooting.gif';
+import shootingImage from "./customStyle/mechanics/shooting mechanics.png";
+import shootingGif from "./customStyle/mechanics/gif/shooting.gif";
 
-import carcont from './customStyle/mechanics/car.png';
-import carcontgif from './customStyle/mechanics/gif/Car.gif';
+import carcont from "./customStyle/mechanics/car.png";
+import carcontgif from "./customStyle/mechanics/gif/Car.gif";
+
+
+import parkour from "./customStyle/mechanics/parkour.png";
+import parGif from "./customStyle/mechanics/gif/parkour.gif";
 
 const mechanics = [
   {
-    name: 'Shooting System',
+    name: "Shooting System",
     image: shootingImage,
     gif: shootingGif,
-    skills: ['Unreal Engine', 'Visual Scripting', 'Raycasting', 'Ammo Management'],
-    description: 'A dynamic shooting system with hit detection and recoil.',
-    link: 'https://github.com/Frost2204/Shooting-Game-Mechanics', // Replace with your actual link
+    skills: [
+      "Unreal Engine",
+      "Visual Scripting",
+      "Raycasting",
+      "Ammo Management",
+    ],
+    description: "A dynamic shooting system with hit detection and recoil.",
+    link: "https://github.com/Frost2204/Shooting-Game-Mechanics", // Replace with your actual link
   },
   {
-    name: 'Car Controller',
+    name: "Car Controller",
     image: carcont,
     gif: carcontgif,
-    skills: ['Unity', 'C#', 'Collider', 'Player Controller','car'],
-    description: 'A Unity car driving system with acceleration, braking, and steering using Wheel Colliders.',
-    link: 'https://github.com/Frost2204/Car-Controller', // Replace with your actual link
+    skills: ["Unity", "C#", "Collider", "Player Controller", "car"],
+    description:
+      "A Unity car driving system with acceleration, braking, and steering using Wheel Colliders.",
+    link: "https://github.com/Frost2204/Car-Controller", // Replace with your actual link
   },
-  
+  {
+    name: "Assassins Creed Parkour System",
+    image: parkour,
+    gif: parGif,
+    skills: ["Unity", "C#", "Collider", "Player Controller", "Player Movement"],
+    description:
+      "A dynamic parkour system for Unity, allowing the player to vault over obstacles with randomized animations.",
+    link: "https://github.com/Frost2204/Parkour-System", // Replace with your actual link
+  },
 ];
 
 const GameMechanics = () => {
@@ -49,10 +67,10 @@ const GameMechanics = () => {
             key={index}
             className="p-6 transition-all duration-700 rounded-lg shadow-lg flex flex-col justify-between"
             sx={{
-              backdropFilter: 'blur(10px)',
-              backgroundColor: 'rgba(255, 255, 255, 0.1)',
-              borderRadius: '20px',
-              boxShadow: '0 0 15px rgba(255, 255, 255, 0.3)',
+              backdropFilter: "blur(10px)",
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "20px",
+              boxShadow: "0 0 15px rgba(255, 255, 255, 0.3)",
             }}
           >
             {/* Image/GIF Swap on Hover */}
@@ -77,7 +95,13 @@ const GameMechanics = () => {
             </Typography>
             <div className="flex justify-start flex-wrap gap-2 mt-5">
               {mechanic.skills.map((skill, i) => (
-                <Chip key={i} label={skill} className="rounded-full" color="primary" variant="outlined" />
+                <Chip
+                  key={i}
+                  label={skill}
+                  className="rounded-full"
+                  color="primary"
+                  variant="outlined"
+                />
               ))}
             </div>
 
@@ -91,10 +115,10 @@ const GameMechanics = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
-                    borderRadius: '20px',
-                    padding: '8px 16px',
-                    border: '2px solid white',
-                    backgroundColor: 'transparent',
+                    borderRadius: "20px",
+                    padding: "8px 16px",
+                    border: "2px solid white",
+                    backgroundColor: "transparent",
                   }}
                   className="hover:border-white hover:shadow-lg hover:shadow-slate-300"
                 >

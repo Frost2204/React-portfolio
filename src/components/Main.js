@@ -22,7 +22,7 @@ const Main = () => {
       <SectionFive />
       <About />
       <FavoriteGames />
-      <VisualVibe />
+      {/* <VisualVibe /> */}
     </div>
   );
 };
