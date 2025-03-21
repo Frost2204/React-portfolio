@@ -12,6 +12,12 @@ import carcontgif from "./customStyle/mechanics/gif/Car.gif";
 import parkour from "./customStyle/mechanics/parkour.png";
 import parGif from "./customStyle/mechanics/gif/parkour.gif";
 
+
+import scroll from "./customStyle/mechanics/scroll.png";
+import scrollGif from "./customStyle/mechanics/gif/scrollGif.gif";
+
+
+
 const mechanics = [
   {
     name: "Shooting System",
@@ -42,6 +48,15 @@ const mechanics = [
     skills: ["Unity", "C#", "Collider", "Player Controller", "Player Movement"],
     description:
       "A dynamic parkour system for Unity, allowing the player to vault over obstacles with randomized animations.",
+    link: "https://github.com/Frost2204/Parkour-System", // Replace with your actual link
+  },
+  {
+    name: "Smooth Scrollable Menu for Unity",
+    image: scroll,
+    gif: scrollGif,
+    skills: ["Unity", "C#", "2D"],
+    description:
+      "Responsive UI with swipe & button navigation, auto-scaling, and perfect aspect ratio support. 🚀",
     link: "https://github.com/Frost2204/Parkour-System", // Replace with your actual link
   },
 ];
