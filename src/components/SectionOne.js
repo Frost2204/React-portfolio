@@ -63,7 +63,7 @@ const SectionOne = () => {
             <div className="button-flex mt-20">
               {/* Resume Button */}
               <a
-                href="https://drive.google.com/file/d/1Yapwv4NbCdUfOFpHHsFdVu63TSwX-sGG/view?usp=sharing"
+                href="https://drive.google.com/file/d/13Z_hvkLEwNuf150JThNk5wDa4iIfcfi4/view?usp=sharing"
                 target="_blank"
                 className="button-purp w-button"
                 rel="noreferrer"
