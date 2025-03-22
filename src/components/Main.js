@@ -9,6 +9,8 @@ import About from './about';
 import VisualVibe from './visualvibe';
 import FixedButton from './FixedButton';
 
+import { Analytics } from "@vercel/analytics/react"
+
 import GameMechanics from './GameMechanics';
 
 const Main = () => {
@@ -23,6 +25,7 @@ const Main = () => {
       <About />
       <FavoriteGames />
       {/* <VisualVibe /> */}
+      <Analytics/>
     </div>
   );
 };
