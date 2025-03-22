@@ -57,7 +57,7 @@ const mechanics = [
     skills: ["Unity", "C#", "2D"],
     description:
       "Responsive UI with swipe & button navigation, auto-scaling, and perfect aspect ratio support. 🚀",
-    link: "https://github.com/Frost2204/Parkour-System", // Replace with your actual link
+    link: "https://github.com/Frost2204/Smooth-Scrollable-Menu-for-Unity", // Replace with your actual link
   },
 ];
 
