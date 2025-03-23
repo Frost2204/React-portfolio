@@ -17,6 +17,10 @@ import scroll from "./customStyle/mechanics/scroll.png";
 import scrollGif from "./customStyle/mechanics/gif/scrollGif.gif";
 
 
+import pi from "./customStyle/mechanics/piCollision.png";
+import piGif from "./customStyle/mechanics/gif/pi.gif";
+
+
 
 const mechanics = [
   {
@@ -58,6 +62,15 @@ const mechanics = [
     description:
       "Responsive UI with swipe & button navigation, auto-scaling, and perfect aspect ratio support. 🚀",
     link: "https://github.com/Frost2204/Smooth-Scrollable-Menu-for-Unity", // Replace with your actual link
+  },
+  {
+    name: "Pi Collisions Simulation",
+    image: pi,
+    gif: piGif,
+    skills: ["Unity", "C#", "2D"],
+    description:
+      "This project demonstrates the behavior of a small box colliding with a larger, heavier box, following the principles of momentum and energy conservation.",
+    link: "https://github.com/Frost2204/Pi-Collisions-Simulation", // Replace with your actual link
   },
 ];
 
