@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Box, Grid, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import profileImage from './customStyle/about/p.jpeg'; // Ensure the image path is correct
+import profileImage from './customStyle/about/G1.jpeg'; // Ensure the image path is correct
 import { motion } from 'framer-motion';
 
 // Styled Image with fixed size, curved border, and 1:1 aspect ratio
