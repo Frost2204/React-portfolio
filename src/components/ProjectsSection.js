@@ -8,8 +8,17 @@ import projectThreeImage from './customStyle/snake.png';
 import projectFourImage from './customStyle/piano.png';
 import projectFiveImage from './customStyle/codeeditor.jpeg';
 import projectSixImage from './customStyle/entrancewise.jpg';
+import AlgorithmVisualizer from './customStyle/AlgorithmVisualizer.png';
+
 
 const projects = [
+  {
+    name: 'Algorithm Visualizer',
+    image: AlgorithmVisualizer,
+    skills: ['HTML', 'CSS', 'TypeScript'],
+    description: 'Visualize and understand how different algorithms work step by step',
+    link: 'https://algorithmvisualizersorting.netlify.app/',
+  },
   {
     name: 'AdsVenchar',
     image: projectOneImage,
