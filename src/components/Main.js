@@ -2,6 +2,7 @@ import React from 'react';
 import SectionOne from './SectionOne';
 import SectionTwo from './SectionTwo';
 import SectionThree from './GameSection';
+import ExperienceSection from './ExperienceSection';
 import SectionFour from './BlenderSection';
 import SectionFive from './ProjectsSection';
 import FavoriteGames from './EpicPlaygrounds'; // New Section
@@ -18,6 +19,7 @@ const Main = () => {
     <div>
       <SectionOne />
       <SectionTwo />
+      <ExperienceSection />
       <SectionThree />
       <GameMechanics />
       <SectionFour />
