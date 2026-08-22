@@ -122,7 +122,7 @@ const Header = () => {
             }}
           >
             <a
-              href="https://github.com/Frost2204" target="_blank"
+              href="https://github.com/Frost2204" target="_blank" rel="noreferrer"
               style={{ textDecoration: 'none' }}
             >
               <img
@@ -170,7 +170,7 @@ const Header = () => {
               >
                 {/* Skills icon with hover effect and new tab link */}
                 <a
-                  href="https://github.com/Frost2204" target="_blank"
+                  href="https://github.com/Frost2204" target="_blank" rel="noreferrer"
                   style={{ textDecoration: 'none' }}
                 >
                   <img

@@ -7,7 +7,6 @@ import SectionFour from './BlenderSection';
 import SectionFive from './ProjectsSection';
 import FavoriteGames from './EpicPlaygrounds'; // New Section
 import About from './about';
-import VisualVibe from './visualvibe';
 import FixedButton from './FixedButton';
 
 import { Analytics } from "@vercel/analytics/react"
