@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Button,
   Dialog,
@@ -8,14 +8,15 @@ import {
   Typography,
   Box,
   IconButton,
-} from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
+} from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 // Import your image for the left side of the contact form
-import contactImage from './customStyle/about/VisualVibe.png'; // Update the path as needed
+import contactImage from "./customStyle/about/VisualVibe.png"; // Update the path as needed
 
 const Contact = ({ open, onClose }) => {
-  const [submissionStatus, setSubmissionStatus] = useState('');
+  const [submissionStatus, setSubmissionStatus] = useState("");
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -54,68 +55,129 @@ const Contact = ({ open, onClose }) => {
       maxWidth="md"
       fullWidth
       sx={{
-        '& .MuiDialog-paper': {
-          border: '2px solid white',
-          boxShadow: '0 0 20px rgba(255, 255, 255, 0.5)',
-          borderRadius: '30px',
-          transition: 'all 0.3s ease-in-out', // Smooth dialog transition
+        "& .MuiDialog-paper": {
+          border: "2px solid white",
+          boxShadow: "0 0 20px rgba(255, 255, 255, 0.5)",
+          borderRadius: "30px",
+          transition: "all 0.3s ease-in-out", // Smooth dialog transition
         },
       }}
     >
-<DialogTitle className='bg-[#1A1B1D] text-white font-bold '>
-  Contact Me
-  <span style={{ fontWeight: 'normal', fontSize: '0.85rem', display: 'block', marginTop: '5px', color: 'gray' }}>
-    For inquiries, custom projects, website development, or 3D modeling services, feel free to reach out.
-  </span>
-  <IconButton
-    aria-label="close"
-    onClick={onClose}
-    sx={{
-      position: 'absolute',
-      right: 8,
-      top: 8,
-      color: 'white',
-      transition: 'color 0.3s ease-in-out',
-      '&:hover': {
-        color: 'gray',
-      },
-    }}
-  >
-    <CloseIcon />
-  </IconButton>
-</DialogTitle>
+      <DialogTitle className="bg-[#1A1B1D] text-white font-bold ">
+        Contact Me
+        <span
+          style={{
+            fontWeight: "normal",
+            fontSize: "0.85rem",
+            display: "block",
+            marginTop: "5px",
+            color: "gray",
+          }}
+        >
+          For inquiries, custom projects, website development, or 3D modeling
+          services, feel free to reach out.
+        </span>
+        <IconButton
+          aria-label="close"
+          onClick={onClose}
+          sx={{
+            position: "absolute",
+            right: 8,
+            top: 8,
+            color: "white",
+            transition: "color 0.3s ease-in-out",
+            "&:hover": {
+              color: "gray",
+            },
+          }}
+        >
+          <CloseIcon />
+        </IconButton>
+      </DialogTitle>
 
-      
-      <DialogContent sx={{ display: 'flex', alignItems: 'center', flexDirection: { xs: 'column', sm: 'row' }, bgcolor: '#1A1B1D' }}>
+      <DialogContent
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          flexDirection: { xs: "column", sm: "row" },
+          bgcolor: "#1A1B1D",
+        }}
+      >
         {/* Image on the left */}
         <Box
-          component="img"
-          src={contactImage}
-          alt="Contact"
           sx={{
-            width: { xs: '100%', sm: '40%' },
-            height: 'auto',
-            borderRadius: '30px',
-            objectFit: 'cover',
-            marginBottom: { xs: 2, sm: 0 },
-            transition: 'all 0.3s ease-in-out', // Smooth image transition
+            width: { xs: "100%", sm: "40%" },
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
           }}
-        />
+        >
+          <Box
+            component="img"
+            src={contactImage}
+            alt="Contact"
+            sx={{
+              width: "100%",
+              height: "auto",
+              borderRadius: "30px",
+              objectFit: "cover",
+              transition: "all 0.3s ease-in-out", // Smooth image transition
+            }}
+          />
+
+          {/* Other ways to contact */}
+          <Box
+            sx={{
+              display: "flex",
+              gap: 2,
+              justifyContent: "center",
+              marginTop: 2,
+              marginBottom: { xs: 2, sm: 0 },
+            }}
+          >
+            <Button
+              href="https://www.linkedin.com/in/nikunj-ranjan-668696177/"
+              target="_blank"
+              rel="noreferrer"
+              variant="outlined"
+              startIcon={<LinkedInIcon />}
+              sx={{
+                borderColor: "white",
+                color: "white",
+                "&:hover": {
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
+                  borderColor: "white",
+                  boxShadow: "0 0 10px white",
+                },
+              }}
+            >
+              LinkedIn
+            </Button>
+          </Box>
+        </Box>
 
         {/* Vertical Glowing Line */}
         <Box
           sx={{
-            width: '2px',
-            height: { xs: '10px', sm: '100%' },
-            bgcolor: 'white',
-            boxShadow: '0 0 10px white',
+            width: "2px",
+            height: { xs: "10px", sm: "100%" },
+            bgcolor: "white",
+            boxShadow: "0 0 10px white",
             marginX: 2,
-            transition: 'height 0.3s ease-in-out', // Smooth line transition for height
+            transition: "height 0.3s ease-in-out", // Smooth line transition for height
           }}
         />
 
         {/* Form on the right */}
-        <Box className="flex-grow p-4" sx={{ bgcolor: '#1A1B1D', borderRadius: '8px', color: 'white', width: { xs: '100%', sm: '60%' } }}>
+        <Box
+          className="flex-grow p-4"
+          sx={{
+            bgcolor: "#1A1B1D",
+            borderRadius: "8px",
+            color: "white",
+            width: { xs: "100%", sm: "60%" },
+          }}
+        >
           <form onSubmit={onSubmit}>
             <TextField
               fullWidth
@@ -126,26 +188,27 @@ const Contact = ({ open, onClose }) => {
               required
               InputLabelProps={{
                 sx: {
-                  color: 'white',
-                  '&.Mui-focused': {
-                    color: 'white',
+                  color: "white",
+                  "&.Mui-focused": {
+                    color: "white",
                   },
                 },
               }}
               InputProps={{
                 sx: {
-                  color: 'white',
-                  transition: 'border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out', // Smooth border and box-shadow transitions
-                  '& .MuiOutlinedInput-notchedOutline': {
-                    borderColor: 'white',
+                  color: "white",
+                  transition:
+                    "border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out", // Smooth border and box-shadow transitions
+                  "& .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "white",
                   },
-                  '&:hover .MuiOutlinedInput-notchedOutline': {
-                    borderColor: 'white',
-                    boxShadow: '0 0 10px white',
+                  "&:hover .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "white",
+                    boxShadow: "0 0 10px white",
                   },
-                  '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                    borderColor: 'white',
-                    boxShadow: '0 0 10px white',
+                  "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "white",
+                    boxShadow: "0 0 10px white",
                   },
                 },
               }}
@@ -161,26 +224,27 @@ const Contact = ({ open, onClose }) => {
               required
               InputLabelProps={{
                 sx: {
-                  color: 'white',
-                  '&.Mui-focused': {
-                    color: 'white',
+                  color: "white",
+                  "&.Mui-focused": {
+                    color: "white",
                   },
                 },
               }}
               InputProps={{
                 sx: {
-                  color: 'white',
-                  transition: 'border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out', // Smooth border and box-shadow transitions
-                  '& .MuiOutlinedInput-notchedOutline': {
-                    borderColor: 'white',
+                  color: "white",
+                  transition:
+                    "border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out", // Smooth border and box-shadow transitions
+                  "& .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "white",
                   },
-                  '&:hover .MuiOutlinedInput-notchedOutline': {
-                    borderColor: 'white',
-                    boxShadow: '0 0 10px white',
+                  "&:hover .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "white",
+                    boxShadow: "0 0 10px white",
                   },
-                  '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                    borderColor: 'white',
-                    boxShadow: '0 0 10px white',
+                  "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "white",
+                    boxShadow: "0 0 10px white",
                   },
                 },
               }}
@@ -197,26 +261,27 @@ const Contact = ({ open, onClose }) => {
               required
               InputLabelProps={{
                 sx: {
-                  color: 'white',
-                  '&.Mui-focused': {
-                    color: 'white',
+                  color: "white",
+                  "&.Mui-focused": {
+                    color: "white",
                   },
                 },
               }}
               InputProps={{
                 sx: {
-                  color: 'white',
-                  transition: 'border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out', // Smooth border and box-shadow transitions
-                  '& .MuiOutlinedInput-notchedOutline': {
-                    borderColor: 'white',
+                  color: "white",
+                  transition:
+                    "border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out", // Smooth border and box-shadow transitions
+                  "& .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "white",
                   },
-                  '&:hover .MuiOutlinedInput-notchedOutline': {
-                    borderColor: 'white',
-                    boxShadow: '0 0 10px white',
+                  "&:hover .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "white",
+                    boxShadow: "0 0 10px white",
                   },
-                  '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                    borderColor: 'white',
-                    boxShadow: '0 0 10px white',
+                  "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "white",
+                    boxShadow: "0 0 10px white",
                   },
                 },
               }}
@@ -228,18 +293,19 @@ const Contact = ({ open, onClose }) => {
               className="mt-4"
               type="submit"
               sx={{
-                backgroundColor: 'transparent',
-                borderColor: 'white',
-                color: 'white',
-                transition: 'background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out', // Smooth button transition
-                '&:hover': {
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  borderColor: 'white',
-                  boxShadow: '0 0 10px white',
+                backgroundColor: "transparent",
+                borderColor: "white",
+                color: "white",
+                transition:
+                  "background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out", // Smooth button transition
+                "&:hover": {
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
+                  borderColor: "white",
+                  boxShadow: "0 0 10px white",
                 },
-                '&.Mui-focused': {
-                  borderColor: 'white',
-                  boxShadow: '0 0 10px white',
+                "&.Mui-focused": {
+                  borderColor: "white",
+                  boxShadow: "0 0 10px white",
                 },
               }}
             >
@@ -251,8 +317,8 @@ const Contact = ({ open, onClose }) => {
               variant="body2"
               className="mt-2"
               sx={{
-                color: submissionStatus.includes("Success") ? 'green' : 'red',
-                transition: 'color 0.3s ease-in-out', // Smooth transition for status message
+                color: submissionStatus.includes("Success") ? "green" : "red",
+                transition: "color 0.3s ease-in-out", // Smooth transition for status message
               }}
             >
               {submissionStatus}

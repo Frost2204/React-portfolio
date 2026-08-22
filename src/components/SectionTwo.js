@@ -92,9 +92,6 @@ const SectionTwo = () => {
             <StyledButton variant="contained" startIcon={<span role="img" aria-label="blender">🧑‍💻</span>}>
               C#
             </StyledButton>
-            <StyledButton variant="contained" startIcon={<span role="img" aria-label="blender">#️⃣</span>}>
-              Unity Version Control
-            </StyledButton>
             <StyledButton variant="contained" startIcon={<span role="img" aria-label="blender">🖥️</span>}>
               Object-Oriented Programming
             </StyledButton>
@@ -115,6 +112,9 @@ const SectionTwo = () => {
             </StyledButton>
             <StyledButton variant="contained" startIcon={<span role="img" aria-label="nodejs">🌳</span>}>
               Node.js
+            </StyledButton>
+            <StyledButton variant="contained" startIcon={<span role="img" aria-label="typescript">🔷</span>}>
+              Three Js
             </StyledButton>
             <StyledButton variant="contained" startIcon={<span role="img" aria-label="typescript">🔷</span>}>
               TypeScript

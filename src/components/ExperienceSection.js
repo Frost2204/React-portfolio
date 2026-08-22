@@ -11,7 +11,7 @@ const experiences = [
     image: companyLogo,
     hoverGif: companyLogo,
     website: "https://myyhashstash.com/",
-    skills: ["Unity", "Blender", "Three.js", "AR Projects", "Friebase"],
+    skills: ["Unity", "Blender", "Three.js", "AR Projects", "Firebase"],
     description:
       "Working on game development and interactive experiences across Unity, Blender, Three.js, and augmented reality projects.",
     works: [
@@ -55,6 +55,17 @@ const experiences = [
         skills: ["Unity", "C#", "2D", "3D", "WebGL", "Firebase"],
         description:
           "Worked on multiple casual games across mobile and WebGL platforms, developing gameplay systems, level progression, UI, animations, player economies, and monetization features. Implemented Firebase services, advertisements, analytics, and optimized game performance for smooth cross-platform experiences.",
+        link: "",
+      },
+      {
+        name: "AR Fun Activity",
+        image:
+          "https://tse4.mm.bing.net/th/id/OIP.5C_vrpt7mV0f8ebW0PoYHgHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+        hoverGif:
+          "https://myyhashstash.com/assets/videos/print-ar/real-estate.mp4",
+        skills: ["Three.js", "8th Wall", "WebXR", "JavaScript", "AR"],
+        description:
+          "Built browser-based AR mini-games using Three.js and 8th Wall WebXR, with real-time camera tracking and interactive 3D elements. Implemented markerless and image-tracked experiences that users could access instantly through a shared link or QR code without requiring an app installation.",
         link: "",
       },
     ],
