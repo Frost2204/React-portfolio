@@ -1,10 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import "./customStyle/sectionone.css";
 import videoSource from "./customStyle/bg.mp4"; // Add your video source path
 
 const SectionOne = () => {
   const spanRef = useRef(null);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     const words = ["Game", "Web", "Blender"];
@@ -76,13 +75,13 @@ const SectionOne = () => {
               {/* Dropdown Container */}
               <div className="relative group">
                 {/* View Projects Button */}
-                <a
-                  href="#"
+                <button
+                  type="button"
                   className="button-hero black top-2 w-button px-6 py-3 relative z-20"
                   aria-label="View Projects"
                 >
                   View Projects
-                </a>
+                </button>
 
                 {/* 🔽 Dropdown for Mobile (Appears Below) */}
                 <div className="absolute top-full mt-2 w-52 bg-gray-900 text-white shadow-lg rounded-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 md:hidden">

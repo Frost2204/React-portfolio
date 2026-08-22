@@ -99,12 +99,15 @@ const useFadeInOnScroll = () => {
   const elementRef = useRef(null);
 
   useEffect(() => {
-    if (elementRef.current) {
-      observer.current.observe(elementRef.current);
+    const currentObserver = observer.current;
+    const currentElement = elementRef.current;
+
+    if (currentElement) {
+      currentObserver.observe(currentElement);
     }
     return () => {
-      if (elementRef.current) {
-        observer.current.unobserve(elementRef.current);
+      if (currentElement) {
+        currentObserver.unobserve(currentElement);
       }
     };
   }, []);

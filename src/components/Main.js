@@ -27,6 +27,7 @@ const Main = () => {
       <About />
       <FavoriteGames />
       {/* <VisualVibe /> */}
+      <FixedButton />
       <Analytics/>
     </div>
   );
