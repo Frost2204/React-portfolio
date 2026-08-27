@@ -1,56 +1,69 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { Box, Typography, Chip, Button } from '@mui/material';
-import Contact from './Contact'; // Import the new Contact component
+import React, { useEffect, useState, useRef } from "react";
+import { Box, Typography, Chip, Button } from "@mui/material";
+import Contact from "./Contact"; // Import the new Contact component
 
 // Importing local images from src/customStyle
-import projectOneImage from './customStyle/adsvenchar.png';
-import projectThreeImage from './customStyle/snake.png';
-import projectFourImage from './customStyle/piano.png';
-import projectFiveImage from './customStyle/codeeditor.jpeg';
-import projectSixImage from './customStyle/entrancewise.jpg';
-import AlgorithmVisualizer from './customStyle/AlgorithmVisualizer.png';
-
+import projectOneImage from "./customStyle/adsvenchar.png";
+import projectThreeImage from "./customStyle/snake.png";
+import projectFourImage from "./customStyle/piano.png";
+import projectFiveImage from "./customStyle/codeeditor.jpeg";
+import projectSixImage from "./customStyle/entrancewise.jpg";
+import AlgorithmVisualizer from "./customStyle/AlgorithmVisualizer.png";
+import ExpenceAnalyzer from "./customStyle/ExpenceAnalyzer.png";
 
 const projects = [
   {
-    name: 'Algorithm Visualizer',
+    name: "Daily Expense Analyzer",
+    image: ExpenceAnalyzer,
+    skills: ["HTML", "CSS", "JavaScript", "Firebase"],
+    description: "Track and record all daily, weekly, and monthly expenses.",
+    link: "https://my-daily-spend-delta.vercel.app/",
+  },
+  {
+    name: "Algorithm Visualizer",
     image: AlgorithmVisualizer,
-    skills: ['HTML', 'CSS', 'TypeScript'],
-    description: 'Visualize and understand how different algorithms work step by step',
-    link: 'https://algorithmvisualizersorting.netlify.app/',
+    skills: ["HTML", "CSS", "TypeScript"],
+    description:
+      "Visualize and understand how different algorithms work step by step",
+    link: "https://algorithmvisualizersorting.netlify.app/",
   },
   {
-    name: 'AdsVenchar',
+    name: "AdsVenchar",
     image: projectOneImage,
-    skills: ['HTML', 'CSS', 'JavaScript'],
-    description: 'A web-based adventure game where users can explore different scenarios.',
-    link: 'https://frost2204.github.io/AdsVenchar2.0/index.html',
+    skills: ["HTML", "CSS", "JavaScript"],
+    description:
+      "A web-based adventure game where users can explore different scenarios.",
+    link: "https://frost2204.github.io/AdsVenchar2.0/index.html",
   },
   {
-    name: 'Snake Game',
+    name: "Snake Game",
     image: projectThreeImage,
-    skills: ['HTML', 'CSS', 'JavaScript'],
-    description: 'A classic snake game built using web technologies for browser play.',
-    link: 'https://frost2204.github.io/Snake-game/',
+    skills: ["HTML", "CSS", "JavaScript"],
+    description:
+      "A classic snake game built using web technologies for browser play.",
+    link: "https://frost2204.github.io/Snake-game/",
   },
   {
-    name: 'Piano',
+    name: "Piano",
     image: projectFourImage,
-    skills: ['HTML', 'CSS', 'JavaScript'],
-    description: 'A web-based piano application where users can play piano using keyboard keys.',
-    link: 'https://frost2204.github.io/Piano/',
+    skills: ["HTML", "CSS", "JavaScript"],
+    description:
+      "A web-based piano application where users can play piano using keyboard keys.",
+    link: "https://frost2204.github.io/Piano/",
   },
   {
-    name: 'Joinode- Online Code Editor',
+    name: "Joinode- Online Code Editor",
     image: projectFiveImage,
-    skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'MongoDB'],
-    description: 'A web-based code application where multiple users can compile and write Java code.',
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "MongoDB"],
+    description:
+      "A web-based code application where multiple users can compile and write Java code.",
   },
   {
-    name: 'Entrance Wise',
+    name: "Entrance Wise",
     image: projectSixImage,
-    skills: ['HTML', 'CSS', 'TypeScript', 'React'],
-    description: 'A web-based E-learning platform where users can prepare for JEE Mains or Advanced as well as for NEET.',
+    skills: ["HTML", "CSS", "TypeScript", "React"],
+    description:
+      "A web-based E-learning platform where users can prepare for JEE Mains or Advanced as well as for NEET.",
   },
 ];
 
@@ -63,7 +76,7 @@ const SectionFive = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          const targetId = entry.target.getAttribute('data-id');
+          const targetId = entry.target.getAttribute("data-id");
           if (entry.isIntersecting) {
             setVisible((prev) => ({
               ...prev,
@@ -79,10 +92,10 @@ const SectionFive = () => {
       },
       {
         threshold: 0.1, // Trigger when 10% of the element is visible
-      }
+      },
     );
 
-    const elements = document.querySelectorAll('.fade-item');
+    const elements = document.querySelectorAll(".fade-item");
     elements.forEach((element) => observer.observe(element));
     observerRef.current = observer;
 
@@ -104,7 +117,7 @@ const SectionFive = () => {
       {/* Title with Animation */}
       <Typography
         variant="h1"
-        className={`fade-item text-center mb-4 transition-all duration-700 ${visible.title ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'}`}
+        className={`fade-item text-center mb-4 transition-all duration-700 ${visible.title ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-5"}`}
         data-id="title"
       >
         <span className="text-[60px] font-bold">Projects</span>
@@ -112,24 +125,24 @@ const SectionFive = () => {
 
       {/* Subtitle with Animation */}
       <Typography
-        className={`fade-item text-center mb-8 transition-all duration-700 ${visible.subtitle ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-5'}`}
+        className={`fade-item text-center mb-8 transition-all duration-700 ${visible.subtitle ? "opacity-100 translate-x-0" : "opacity-0 translate-x-5"}`}
         data-id="subtitle"
       >
         These are Some of the projects I've worked on.
       </Typography>
 
       {/* Project Grid */}
-      <div  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10">
         {projects.map((project, index) => (
           <Box
             key={index}
-            className={`fade-item p-6 bg-[#232529] rounded-lg shadow-lg transition-opacity duration-700 ${visible[index] ? 'opacity-100' : 'opacity-0'}`}
+            className={`fade-item p-6 bg-[#232529] rounded-lg shadow-lg transition-opacity duration-700 ${visible[index] ? "opacity-100" : "opacity-0"}`}
             data-id={index} // Ensuring each box is observed separately
             style={{
-              background: 'rgba(255, 255, 255, 0.1)', // Transparent background
-              backdropFilter: 'blur(10px)', // Apply blur effect behind
-              borderRadius: '10px', // Rounded corners for a glass effect
-              border: '1px solid rgba(255, 255, 255, 0.2)', // Subtle border for glass look
+              background: "rgba(255, 255, 255, 0.1)", // Transparent background
+              backdropFilter: "blur(10px)", // Apply blur effect behind
+              borderRadius: "10px", // Rounded corners for a glass effect
+              border: "1px solid rgba(255, 255, 255, 0.2)", // Subtle border for glass look
             }}
           >
             <div className="relative w-full pb-[100%] rounded-lg overflow-hidden group mb-4">
@@ -163,7 +176,7 @@ const SectionFive = () => {
                   className="rounded-full"
                   color="primary"
                   variant="outlined"
-                  style={{ padding: '4px 8px' }}
+                  style={{ padding: "4px 8px" }}
                 />
               ))}
             </div>
@@ -177,11 +190,11 @@ const SectionFive = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
-                    borderRadius: '20px',
-                    padding: '8px 16px',
-                    border: '2px solid white',
-                    backgroundColor: 'transparent',
-                    transition: 'border-color 0.3s, box-shadow 0.3s',
+                    borderRadius: "20px",
+                    padding: "8px 16px",
+                    border: "2px solid white",
+                    backgroundColor: "transparent",
+                    transition: "border-color 0.3s, box-shadow 0.3s",
                   }}
                   className="hover:border-white hover:shadow-lg hover:shadow-slate-300"
                 >
@@ -193,11 +206,11 @@ const SectionFive = () => {
                   color="white"
                   onClick={handleClickOpen}
                   style={{
-                    borderRadius: '20px',
-                    padding: '8px 16px',
-                    border: '2px solid white',
-                    backgroundColor: 'transparent',
-                    transition: 'border-color 0.3s, box-shadow 0.3s',
+                    borderRadius: "20px",
+                    padding: "8px 16px",
+                    border: "2px solid white",
+                    backgroundColor: "transparent",
+                    transition: "border-color 0.3s, box-shadow 0.3s",
                   }}
                   className="hover:border-white hover:shadow-lg hover:shadow-slate-300"
                 >
